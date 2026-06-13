@@ -71,7 +71,7 @@ export default function ContactUs() {
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
         {/* Hero Banner */}
         <div className="relative h-[400px] md:h-[500px] overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600" alt="SquareMeal Office" className="w-full h-full object-cover" />
+          <img loading="lazy" src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600" alt="SquareMeal Office" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-rich-black/90 via-rich-black/70 to-transparent" />
           <div className="absolute inset-0 max-w-[1440px] mx-auto px-5 md:px-20 flex flex-col justify-center">
             <motion.div variants={fadeInUp} initial="hidden" animate="visible" className="max-w-xl">

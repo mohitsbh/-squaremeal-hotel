@@ -85,7 +85,7 @@ export default function GiftVouchers() {
                 <Button variant="primary" size="lg">Learn More</Button>
               </div>
               <div className="flex-1">
-                <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600" alt="Card payment" className="w-full object-cover" />
+                <img loading="lazy" src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600" alt="Card payment" className="w-full object-cover" />
               </div>
             </div>
           </motion.div>
@@ -107,7 +107,7 @@ export default function GiftVouchers() {
               {products.map(product => (
                 <motion.div key={product.name} variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="group cursor-pointer">
                   <div className="bg-ivory mb-4 overflow-hidden aspect-square">
-                    <img src={product.image} alt={product.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <img loading="lazy" src={product.image} alt={product.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <p className="font-body text-xs uppercase tracking-wider text-champagne-gold mb-1">{product.brand}</p>
                   <h3 className="font-display text-base text-rich-black mb-1">{product.name}</h3>

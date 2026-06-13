@@ -205,7 +205,7 @@ export default function RooftopDining() {
               {rooftopRestaurants.map((venue, i) => (
                 <motion.div key={venue.name} variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="group bg-soft-white border border-charcoal/5 hover:border-champagne-gold/30 transition-all duration-500">
                   <div className="relative h-48 overflow-hidden">
-                    <img src={venue.image} alt={venue.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <img loading="lazy" src={venue.image} alt={venue.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                     <div className="absolute top-3 left-3 bg-rich-black/80 text-champagne-gold font-label-sm text-[10px] uppercase tracking-widest px-3 py-1">{venue.floor}</div>
                   </div>
                   <div className="p-6">

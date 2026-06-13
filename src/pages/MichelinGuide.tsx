@@ -89,7 +89,7 @@ export default function MichelinGuide() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {threeStarRestaurants.map((r, i) => (
                 <motion.div key={r.name} variants={staggerItem} initial="hidden" whileInView="visible" viewport={{ once: true }} className="group relative overflow-hidden bg-rich-black">
-                  <img src={`https://images.unsplash.com/photo-${1517248135467 + (i % 5)}?w=600&h=400&fit=crop`} alt={r.name} className="w-full h-48 object-cover opacity-60 group-hover:opacity-40 transition-opacity" onError={(e) => { e.currentTarget.src = 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop' }} />
+                  <img loading="lazy" src={`https://images.unsplash.com/photo-${1517248135467 + (i % 5)}?w=600&h=400&fit=crop`} alt={r.name} className="w-full h-48 object-cover opacity-60 group-hover:opacity-40 transition-opacity" onError={(e) => { e.currentTarget.src = 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop' }} />
                   <div className="p-6">
                     <div className="flex items-center gap-1 mb-2">
                       {[...Array(3)].map((_, j) => <Star key={j} className="w-4 h-4 text-champagne-gold fill-champagne-gold" />)}

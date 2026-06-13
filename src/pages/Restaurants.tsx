@@ -128,7 +128,7 @@ export default function Restaurants() {
                 <motion.div key={r.name} variants={staggerItem} className="group cursor-pointer">
                   <Link to={r.slug} className="block">
                     <div className="relative overflow-hidden aspect-[4/3] mb-4">
-                      <img src={r.image} alt={r.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                      <img loading="lazy" src={r.image} alt={r.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                       <div className="absolute inset-0 gradient-overlay" />
                       <div className="absolute top-3 left-3 flex items-center gap-1 bg-rich-black/70 text-champagne-gold px-2 py-1 text-xs font-body"><Star className="w-3 h-3 fill-champagne-gold" />{r.rating}</div>
                     </div>
@@ -192,7 +192,7 @@ export default function Restaurants() {
               {collections.map((c) => (
                 <motion.div key={c.title} variants={staggerItem} className="group relative overflow-hidden aspect-[4/3] cursor-pointer">
                   <Link to={c.slug} className="block h-full">
-                    <img src={c.image} alt={c.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <img loading="lazy" src={c.image} alt={c.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                     <div className="absolute inset-0 gradient-overlay-full" />
                     <div className="absolute bottom-0 left-0 right-0 p-6">
                       <h3 className="font-display text-xl text-soft-white mb-1">{c.title}</h3>
@@ -216,7 +216,7 @@ export default function Restaurants() {
                 <motion.div key={item.title} variants={staggerItem} className="group cursor-pointer bg-soft-white border border-charcoal/10">
                   <Link to={item.slug} className="block">
                     <div className="relative overflow-hidden aspect-[16/9]">
-                      <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                      <img loading="lazy" src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                     </div>
                     <div className="p-5">
                       <span className="text-champagne-gold text-xs font-body uppercase tracking-wider">{item.date}</span>
