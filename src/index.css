@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-rich-black: #0A0A0A;
+  --color-charcoal: #171717;
+  --color-ivory: #F8F5F0;
+  --color-soft-white: #FFFFFF;
+  --color-champagne-gold: #C9A86A;
+  --color-subtle-gold: #E9D7A5;
+  --color-surface: #FAF9F7;
+  --color-surface-dim: #DADAD8;
+  --color-surface-container: #EFEEEC;
+  --color-surface-container-high: #E9E8E6;
+  --color-surface-container-highest: #E3E2E0;
+  --color-surface-variant: #E3E2E0;
+  --color-on-surface: #1A1C1B;
+  --color-on-surface-variant: #444748;
+  --color-outline: #747878;
+  --color-outline-variant: #C4C7C7;
+  --color-secondary: #735C00;
+  --color-secondary-container: #FED65B;
+
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+
+  --spacing-gutter: 24px;
+  --spacing-margin-mobile: 20px;
+  --spacing-margin-desktop: 80px;
+  --spacing-max-width: 1440px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ivory text-rich-black font-body antialiased;
+  }
+
+  ::selection {
+    @apply bg-champagne-gold/30 text-rich-black;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-champagne-gold/40 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-champagne-gold;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .glass-nav {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .gradient-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%);
+  }
+
+  .gradient-overlay-full {
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, transparent 80%);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
