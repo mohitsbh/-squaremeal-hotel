@@ -58,7 +58,7 @@ export function Navbar() {
   const isHome = location.pathname === '/'
   const isTransparent = isHome && !scrolled
   const dropdownRef = useRef<HTMLDivElement>(null)
-  const timeoutRef = useRef<ReturnType<typeof setTimeout>>()
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
